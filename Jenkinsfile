@@ -6,7 +6,12 @@
 				steps { 
 					bat "build.bat"
 				}
-			}	
+			}
+			stage('Deploy') { 
+				steps { 
+					bat "deploy.bat"
+				}
+			}			
 		}
 		
 	}
