@@ -1,2 +1,3 @@
-echo "gradle build"
+cd KitBasicoAutomApp
 gradle build
+exit
