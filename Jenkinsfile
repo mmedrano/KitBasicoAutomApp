@@ -4,11 +4,7 @@
 		stages {
 			stage('Build') { 
 				steps { 
-					script {
-                        // some block
-                        gradle build
-						
-                    }
+					sh build.bat
 				}
 			}	
 		}
