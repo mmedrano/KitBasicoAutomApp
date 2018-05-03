@@ -1,0 +1,1 @@
+gradle -Dflyway.configFiles=../DefaultFlywayConfig.config flywayMigrate
