@@ -1,2 +1,2 @@
-echo "gradle build
-gradle build"
+echo "gradle build"
+gradle build
