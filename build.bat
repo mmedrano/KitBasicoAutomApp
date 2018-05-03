@@ -1,1 +1,1 @@
-gradle build
+echo "gradle build"
