@@ -4,7 +4,7 @@
 		stages {
 			stage('Build') { 
 				steps { 
-					bat build.bat
+					bat "build.bat"
 				}
 			}	
 		}
