@@ -1,10 +1,11 @@
 // This shows a simple build wrapper example, using the AnsiColor plugin.
-	pipeline { 
+	//pipeline { 
 	
-		triggers { pollSCM('* * * * *') }
+		
 		
 		agent {
 		label 'kitbasico'
+		triggers { pollSCM('* * * * *') }
 			
 			node{
 			
@@ -38,4 +39,4 @@
 			}
 		}
 		
-	}
+	//}
