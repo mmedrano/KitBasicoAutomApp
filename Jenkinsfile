@@ -2,11 +2,14 @@
 	pipeline { 
 		agent any 
 		triggers { pollSCM('* * * * *') }
+		node{
 		
-		stages {
-			def server = Artifactory.server "http://localhost:8081/artifactory"
+		def server = Artifactory.server "http://localhost:8081/artifactory"
 		def rtGradle = Artifactory.newGradleBuild()
 		def buildInfo
+		
+		stages {
+			
 		
 			stage('Build') { 
 				steps { 
@@ -24,6 +27,10 @@
 				rtGradle.resolver repo:'example-repo-local', server: server
 				server.publishBuildInfo buildInfo
 			}			
+		}
+		
+		
+		
 		}
 		
 	}
