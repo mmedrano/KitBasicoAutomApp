@@ -3,11 +3,11 @@
 		agent any 
 		triggers { pollSCM('* * * * *') }
 		
-		def server = Artifactory.server "http://localhost:8081/artifactory"
+		stages {
+			def server = Artifactory.server "http://localhost:8081/artifactory"
 		def rtGradle = Artifactory.newGradleBuild()
 		def buildInfo
 		
-		stages {
 			stage('Build') { 
 				steps { 
 					//bat "build.bat"
