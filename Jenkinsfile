@@ -1,4 +1,5 @@
 // This shows a simple build wrapper example, using the AnsiColor plugin.
+	def server = Artifactory.server "http://localhost:8081/artifactory"
 	pipeline { 
 		agent any 
 		triggers { pollSCM('* * * * *') }
@@ -14,7 +15,7 @@
 					bat "deploy.bat"
 				}
 			}
-			//stage('Versionar') {
+			stage('Versionar') {
 			//def server = Artifactory.server "http://localhost:8081/artifactory"
 			//def rtGradle = Artifactory.newGradleBuild()
 			//def buildInfo
@@ -24,7 +25,7 @@
 				//rtGradle.deployer repo:'example-repo-local', server: server
 				//rtGradle.resolver repo:'example-repo-local', server: server
 				//server.publishBuildInfo buildInfo
-			//}			
+			}			
 		}
 		
 	}
