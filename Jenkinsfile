@@ -2,9 +2,6 @@
 	pipeline { 
 		agent any 
 		triggers { pollSCM('* * * * *') }
-		
-		
-		
 		stages {
 			stage('Build') { 
 				steps { 
@@ -17,7 +14,7 @@
 					bat "deploy.bat"
 				}
 			}
-			stage('Versionar') {
+			//stage('Versionar') {
 			//def server = Artifactory.server "http://localhost:8081/artifactory"
 			//def rtGradle = Artifactory.newGradleBuild()
 			//def buildInfo
@@ -27,7 +24,7 @@
 				//rtGradle.deployer repo:'example-repo-local', server: server
 				//rtGradle.resolver repo:'example-repo-local', server: server
 				//server.publishBuildInfo buildInfo
-			}			
+			//}			
 		}
 		
 	}
