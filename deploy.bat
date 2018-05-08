@@ -1,2 +1,2 @@
 cd KitBasicoAutomApp
-gradle -Dflyway.configFiles=../DefaultFlywayConfig.config flywayMigrate
+gradle -Dflyway.configFiles=../DefaultFlywayConfig.config flywayRepair flywayMigrate
