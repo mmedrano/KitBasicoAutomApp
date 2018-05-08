@@ -8,7 +8,7 @@
 		stages {
 			stage('Build') { 
 				steps { 
-					//bat "build.bat"
+					bat "build.bat"
 					
 				}
 			}
@@ -18,15 +18,15 @@
 				}
 			}
 			stage('Versionar') {
-			def server = Artifactory.server "http://localhost:8081/artifactory"
-			def rtGradle = Artifactory.newGradleBuild()
-			def buildInfo
+			//def server = Artifactory.server "http://localhost:8081/artifactory"
+			//def rtGradle = Artifactory.newGradleBuild()
+			//def buildInfo
 			
-			buildInfo = rtGradle.run rootDir: "KitBasicoAutomApp/", buildFile: 'build.gradle', tasks: 'clean build'
+			//buildInfo = rtGradle.run rootDir: "KitBasicoAutomApp/", buildFile: 'build.gradle', tasks: 'clean build'
 			
-				rtGradle.deployer repo:'example-repo-local', server: server
-				rtGradle.resolver repo:'example-repo-local', server: server
-				server.publishBuildInfo buildInfo
+				//rtGradle.deployer repo:'example-repo-local', server: server
+				//rtGradle.resolver repo:'example-repo-local', server: server
+				//server.publishBuildInfo buildInfo
 			}			
 		}
 		
