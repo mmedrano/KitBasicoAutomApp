@@ -32,8 +32,8 @@ flyway {
 }
 
 bootJar {
-    baseName = 'gs-spring-boot'
-    version =  '0.1.0'
+    baseName = 'KitBasicoAutomatizacion'
+    version =  ''
 }
 
 repositories {
