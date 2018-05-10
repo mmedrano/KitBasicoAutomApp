@@ -10,6 +10,12 @@
 					
 				}
 			}
+			stage('Analisis de código') { 
+				steps { 
+					bat "anali_code.bat"
+					
+				}
+			}
 			stage('Deploy') { 
 				steps { 
 					bat "deploy.bat"
