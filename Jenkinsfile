@@ -33,7 +33,7 @@
 					  "files": [
 						{
 						  "pattern": "*.jar",
-						  "target": "example-repo-local"
+						  "target": "kit-basico-repository"
 						}
 					 ]
 					}"""
