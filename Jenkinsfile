@@ -1,7 +1,7 @@
 // This shows a simple build wrapper example, using the AnsiColor plugin.
 	
 	pipeline { 
-		agent { docker 'maven:3-alpine' }
+
 		triggers { pollSCM('* * * * *') }
 		stages {
 			stage('Build') { 
