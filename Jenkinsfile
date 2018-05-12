@@ -13,8 +13,8 @@
 						checkout([$class: 'GitSCM', 
 						branches: [[name: '*/master']], 
 						doGenerateSubmoduleConfigurations: false, 
-						extensions: [[$class: 'KitBasicoAutomApp/build/libs', 
-							relativeTargetDir: 'checkout-directory']], 
+						extensions: [[$class: 'RelativeTargetDirectory', 
+							relativeTargetDir: 'KitBasicoAutomApp/build/libs']], 
 						submoduleCfg: [], 
 						userRemoteConfigs: [[url: 'https://github.com/mauro2357/KitBasicoAutomApp-Ops.git']]])     
 			      }
