@@ -21,7 +21,8 @@
 			
 			stage('Desplegar Integración') { 
 				steps { 
-					bat "deploy.bat"
+					bat "deploy-bd.bat"
+					bat "deploy-app.bat"
 				}
 			}
 
@@ -60,7 +61,8 @@
 			      }
 					bat 'mkdir "KitBasicoAutomApp/build/libs/config"'
 					bat 'xcopy "KitBasicoAutomApp-Ops/config" "KitBasicoAutomApp/build/libs/config"'
-					bat "deploy.bat"
+					bat "deploy-bd.bat"
+					bat "deploy-app.bat"
 				}
 			}
 			
