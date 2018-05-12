@@ -9,7 +9,7 @@
 			stage('Desplegar Pruebas') { 
 				steps { 
 					git branch: 'master',url: 'https://github.com/mauro2357/KitBasicoAutomApp-Ops.git'
-					xcopy "config" "KitBasicoAutomApp/build/libs"
+					bat 'xcopy "config" "KitBasicoAutomApp/build/libs"'
 					bat "deploy.bat"
 				}
 			}
