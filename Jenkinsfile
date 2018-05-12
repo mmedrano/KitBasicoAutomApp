@@ -7,7 +7,7 @@
 		stages {
 			stage('Build') { 
 				steps { 
-					powershell 'wget http://localhost:8082/shutdown'
+					powershell 'wget http://localhost:8090/shutdown'
 					bat "build.bat"
 					
 				}
