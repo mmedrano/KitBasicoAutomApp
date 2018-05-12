@@ -8,7 +8,7 @@
 			
 			stage('Desplegar Pruebas') { 
 				steps { 
-					powershell 'cd build/libs'
+					bat 'cd build/libs'
 					git branch: 'master',url: 'https://github.com/mauro2357/KitBasicoAutomApp-Ops.git'
 					bat "deploy.bat"
 				}
