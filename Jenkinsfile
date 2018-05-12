@@ -48,7 +48,8 @@
 			
 			stage('Desplegar Pruebas') { 
 				steps { 
-					powershell 'wget https://github.com/mauro2357/KitBasicoAutomApp-Ops/blob/master/config/application.properties'
+					powershell 'md build\libs\config'
+					powershell 'wget https://github.com/mauro2357/KitBasicoAutomApp-Ops/blob/master/config/application.properties -OutFile build\libs\config\application.properties'
 					bat "deploy.bat"
 				}
 			}
