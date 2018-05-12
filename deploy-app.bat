@@ -1,2 +1,2 @@
-cd build\libs
+cd KitBasicoAutomApp\build\libs
 java -jar KitBasicoAutomatizacion.jar
