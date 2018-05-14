@@ -23,7 +23,7 @@ public class Afiliado {
 		this.numeroIdentificacion = numeroIdentificacion;
 	}
 	public String getNombre() {
-		return nombre+"Otra versio ";
+		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;

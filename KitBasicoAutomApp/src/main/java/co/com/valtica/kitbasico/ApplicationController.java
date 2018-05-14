@@ -15,7 +15,6 @@ public class ApplicationController {
 	 
 	 @GetMapping("/shutdown")
 	 public void shutdown() {
-		 System.out.println("Shutdown"+applicationContext);
 		 applicationContext.close();
 	 }
 	
