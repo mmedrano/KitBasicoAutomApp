@@ -51,11 +51,10 @@
 			
 			stage('Desplegar Pruebas') { 
 				steps { 
-					def desplegar = input(message: Deseas desplegar al ambiente de pruebas?', ok: 'Yes', 
-                        parameters: [booleanParam(defaultValue: true, 
-                        description: 'Si deseas desplegar al ambiente de pruebas presiona este botón',name: 'Yes?')])
 				
 					script{	
+					
+					input "Desea desplegar a pruebas?"
 
 						echo "Desplegando en ambiente de pruebas" + desplegar
 					
