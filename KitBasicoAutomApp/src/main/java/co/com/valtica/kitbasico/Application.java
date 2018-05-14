@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 public class Application {
 
     public static void main(String[] args) {
+		//Comentario de prueba para probar cambios.
         SpringApplication.run(Application.class, args);
     }
 
