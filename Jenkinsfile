@@ -55,8 +55,6 @@
 					script{	
 					
 					input "Desea desplegar a pruebas?"
-
-						echo "Desplegando en ambiente de pruebas" + desplegar
 					
 						checkout([$class: 'GitSCM', 
 						branches: [[name: '*/master']], 
