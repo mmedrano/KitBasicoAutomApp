@@ -5,7 +5,11 @@
 		triggers { pollSCM('* * * * *') }
 		
 		stages {
-			stage('Build') { 
+			stage('Probar unitariamente') { 
+				bat "gradle test"
+			}
+		
+			stage('Generar desplegable') { 
 				steps { 
 					powershell 'wget http://localhost:8090/shutdown'
 					powershell 'wget http://localhost:8091/shutdown'
