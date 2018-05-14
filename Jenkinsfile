@@ -6,7 +6,9 @@
 		
 		stages {
 			stage('Probar unitariamente') { 
-				bat "gradle test"
+				steps { 
+					bat "gradle test"
+				}
 			}
 		
 			stage('Generar desplegable') { 
