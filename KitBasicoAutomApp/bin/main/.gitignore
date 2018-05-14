@@ -1,2 +1,5 @@
-/DefaultFlywayConfig.config
 /application.properties
+/co/
+/db/
+/index.html
+/static/

@@ -1,7 +1,8 @@
-#Thu May 03 15:52:29 COT 2018
-connection.gradle.distribution=GRADLE_DISTRIBUTION(LOCAL_INSTALLATION(C\:\\Users\\Mauricio Giraldo\\Desktop\\eclipse\\gradle-4.6))
-override.workspace.settings=true
-gradle.user.home=
-connection.project.dir=
-offline.mode=false
+auto.sync=false
 build.scans.enabled=false
+connection.gradle.distribution=GRADLE_DISTRIBUTION(LOCAL_INSTALLATION(C\:\\Gradle\\gradle-4.4.1))
+connection.project.dir=
+eclipse.preferences.version=1
+gradle.user.home=
+offline.mode=false
+override.workspace.settings=true
