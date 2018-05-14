@@ -78,8 +78,8 @@
 				mail to: 'mauro2357@gmail.com',
 					subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
 					body: "Something is wrong with ${env.BUILD_URL}"
-    }
-}
+			}
+		}
 		
 	}
 
