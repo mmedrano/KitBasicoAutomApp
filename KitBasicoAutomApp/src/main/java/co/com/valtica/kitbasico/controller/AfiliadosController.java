@@ -22,7 +22,6 @@ public class AfiliadosController {
 	 
 	 @PostMapping("/afiliados")
 	 public Afiliado crearAfiliado(@Valid @RequestBody Afiliado afiliado) {
-		 System.out.println("Hola");
 	     return afiliadosRepository.save(afiliado);
 	 }
 	 
