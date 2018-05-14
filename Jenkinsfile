@@ -21,7 +21,9 @@
 			}
 			stage('Analisis de código') { 
 				steps { 
-					bat "anali_code.bat"
+					withSonarQubeEnv('SonarQubeLocal') {
+						bat 'gradlew sonarqube'
+					}
 					
 				}
 			}
