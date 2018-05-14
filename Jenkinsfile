@@ -8,6 +8,7 @@
 			stage('Build') { 
 				steps { 
 					powershell 'wget http://localhost:8090/shutdown'
+					powershell 'wget http://localhost:8091/shutdown'
 					bat "build.bat"
 					
 				}
@@ -50,7 +51,14 @@
 			
 			stage('Desplegar Pruebas') { 
 				steps { 
-					script{			          
+					script{	
+						
+						def desplegar = input(message: Deseas desplegar al ambiente de pruebas?', ok: 'Yes', 
+                        parameters: [booleanParam(defaultValue: true, 
+                        description: 'Si deseas desplegar al ambiente de pruebas presiona este botón',name: 'Yes?')])
+
+						echo "Desplegando en ambiente de pruebas" + desplegar
+					
 						checkout([$class: 'GitSCM', 
 						branches: [[name: '*/master']], 
 						doGenerateSubmoduleConfigurations: false, 
