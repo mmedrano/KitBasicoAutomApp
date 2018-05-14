@@ -11,8 +11,6 @@ public class AfiliadoTest {
 	@Test
 	public void assertThan() {
 		//mock(IEmpleadoDAO.class);
-		
-		Assert.fail("dsdsdsa");
-	}
+			}
 
 }

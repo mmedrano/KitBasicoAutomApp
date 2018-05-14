@@ -1,2 +1,2 @@
 cd KitBasicoAutomApp
-gradlew sonarqube -Dsonar.organization=mauro2357-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=eef7b88b011b1e1bcb9ebe65f8e237bae28ae94a
+gradlew sonarqube -Dsonar.organization=mauro2357-github -Dsonar.host.url=https://localhost:9000 -Dsonar.login=75364d3fe0e15eec82e9dff49b93cceed78bfbd5
