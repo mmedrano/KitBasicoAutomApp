@@ -22,7 +22,7 @@
 			stage('Analisis de código') { 
 				steps { 
 					withSonarQubeEnv('SonarQubeLocal') {
-						bat 'gradlew sonarqube'
+						bat 'anali_code.bat'
 					}
 					
 				}
