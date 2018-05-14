@@ -7,8 +7,7 @@
 		stages {
 			stage('Probar unitariamente') { 
 				steps { 
-					bat "cd KitBasicoAutomApp"
-					bat "gradle test"
+					bat "test.bat"
 				}
 			}
 		
