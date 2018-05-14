@@ -11,14 +11,7 @@
 				}
 			}
 		
-			stage('Generar desplegable') { 
-				steps { 
-					powershell 'wget http://localhost:8090/shutdown'
-					powershell 'wget http://localhost:8091/shutdown'
-					bat "build.bat"
-					
-				}
-			}
+			
 			stage('Analisis de código') { 
 				steps { 
 					withSonarQubeEnv('SonarQubeLocal') {
@@ -38,6 +31,15 @@
 						}
 					}
 					}
+				}
+			}
+			
+			stage('Generar desplegable') { 
+				steps { 
+					powershell 'wget http://localhost:8090/shutdown'
+					powershell 'wget http://localhost:8091/shutdown'
+					bat "build.bat"
+					
 				}
 			}
 			
