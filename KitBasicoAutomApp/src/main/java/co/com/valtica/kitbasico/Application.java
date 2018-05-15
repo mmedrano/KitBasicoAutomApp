@@ -19,6 +19,9 @@ public class Application {
         return args -> {
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);
+           // for (String beanName : beanNames) {
+               // System.out.println(beanName);
+           // }
 
         };
     }

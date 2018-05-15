@@ -10,25 +10,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.com.valtica.kitbasico.datos.AfiliadosRepository;
 import co.com.valtica.kitbasico.entidades.Afiliado;
+import co.com.valtica.kitbasico.facade.IAfiliadosFacade;
 
 @RestController
 @RequestMapping("/api")
 public class AfiliadosController {
 
 	 @Autowired
-	 AfiliadosRepository afiliadosRepository;
+	 IAfiliadosFacade afiliadosFacade;
 	 
 	 @PostMapping("/afiliados")
 	 public Afiliado crearAfiliado(@Valid @RequestBody Afiliado afiliado) {
-		 return afiliadosRepository.save(afiliado);
+	     return afiliadosFacade.afiliar(afiliado);
 	 }
 	 
 	 @GetMapping("/afiliado/{id}")
-	 public Afiliado getAfiliadoById(@PathVariable(value = "id") Long noteId) {
-	     return afiliadosRepository.findById(noteId)
-	             .orElse(new Afiliado());
+	 public Afiliado getAfiliadoById(@PathVariable(value = "id") Long id) {
+	     return afiliadosFacade.findById(id);
 	 }
 	
 }

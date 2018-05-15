@@ -15,7 +15,20 @@ public class Afiliado {
 	private String nombre;
 	private String apellido;
 	private String telefono;
+	private int edad;
 	
+	public Afiliado() {
+		super();
+	}
+	
+	public Afiliado(String numeroIdentificacion, String nombre, String apellido, String telefono, int edad) {
+		super();
+		this.numeroIdentificacion = numeroIdentificacion;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.telefono = telefono;
+		this.edad = edad;
+	}
 	public String getNumeroIdentificacion() {
 		return numeroIdentificacion;
 	}
@@ -40,5 +53,18 @@ public class Afiliado {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	
+	public boolean validar() {
+		return this.edad >= 18;
+	}
+	
 
 }
