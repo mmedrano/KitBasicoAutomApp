@@ -11,6 +11,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import co.com.valtica.kitbasico.entidades.Afiliado;
+import co.com.valtica.kitbasico.entidades.Ciudad;
 import co.com.valtica.kitbasico.facade.AfiliadosFacade;
 import co.com.valtica.kitbasico.facade.IAfiliadosFacade;
 
@@ -24,13 +25,13 @@ public class AfiliadoFacadeTestConFake {
 	
 	@Test
 	public void crearAfiliadoMayor18Anios() {
-		Afiliado afiliado=new Afiliado("1231232", "Pedro", "Perez", "123123123", 19);
+		Afiliado afiliado=new Afiliado("1231232", "Pedro", "Perez", "123123123", 19, 100000, new Ciudad(1L, "Lima"));
 		assertTrue("Afiliado creado correctamente", afiliadosFacade.afiliar(afiliado)!=null);
 	}
 	
 	@Test
 	public void noCrearAfiliadoMenor18Anios() {
-		Afiliado afiliado=new Afiliado("1231232", "Pedro", "Perez", "123123123", 15);
+		Afiliado afiliado=new Afiliado("1231232", "Pedro", "Perez", "123123123", 15, 0, new Ciudad(1L, "Lima"));
 		assertFalse("Afiliado no creado", afiliadosFacade.afiliar(afiliado)!=null);
 	}
 	

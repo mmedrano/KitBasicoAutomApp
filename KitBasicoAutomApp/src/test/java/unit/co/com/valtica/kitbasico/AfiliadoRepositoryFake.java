@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort;
 
 import co.com.valtica.kitbasico.datos.AfiliadosRepository;
 import co.com.valtica.kitbasico.entidades.Afiliado;
+import co.com.valtica.kitbasico.entidades.Ciudad;
 
 @Profile("test")
 public class AfiliadoRepositoryFake implements AfiliadosRepository{
@@ -19,8 +20,8 @@ public class AfiliadoRepositoryFake implements AfiliadosRepository{
 	private List<Afiliado> afiliados = new ArrayList<>();
 	
 	public AfiliadoRepositoryFake() {
-		afiliados.add(new Afiliado("123", "Mauricio", "Giraldo", "3001112233", 31));
-		afiliados.add(new Afiliado("456", "Nestor", "Escobar", "3004445566", 27));
+		afiliados.add(new Afiliado("123", "Mauricio", "Giraldo", "3001112233", 31, 0, new Ciudad(1L, "Lima")));
+		afiliados.add(new Afiliado("456", "Nestor", "Escobar", "3004445566", 27, 0, new Ciudad(1L, "Lima")));
 	}
 
 	@Override
